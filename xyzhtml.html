@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My College Website</title>
+    
+    <!-- CSS Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .content {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        h2 {
+            color: #003366;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>My College</h1>
+        <nav>
+            <a href="#" onclick="showContent('home')">Home</a>
+            <a href="#" onclick="showContent('programs')">Programs</a>
+            <a href="#" onclick="showContent('services')">Student Services</a>
+            <a href="#" onclick="showContent('faculty')">Faculty</a>
+            <a href="#" onclick="showContent('contact')">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <section id="home" class="content active">
+        <h2>Welcome to My College</h2>
+        <p>We offer a range of undergraduate and postgraduate programs that are designed to prepare students for successful careers. Our college is committed to providing quality education and a nurturing environment.</p>
+    </section>
+
+    <section id="programs" class="content">
+        <h2>Academic Programs</h2>
+        <div class="card">
+            <h3>Bachelor of Science (B.Sc)</h3>
+            <p>Our B.Sc program offers specializations in Physics, Chemistry, Biology, and Computer Science.</p>
+        </div>
+        <div class="card">
+            <h3>Master of Science (M.Sc)</h3>
+            <p>Our M.Sc program allows students to further specialize in their chosen fields of study.</p>
+        </div>
+    </section>
+
+    <section id="services" class="content">
+        <h2>Student Services</h2>
+        <div class="card">
+            <h3>Library</h3>
+            <p>Our library offers a wide range of academic books, journals, and digital resources to support your studies.</p>
+        </div>
+        <div class="card">
+            <h3>Hostel</h3>
+            <p>We provide safe and comfortable hostel facilities for both male and female students.</p>
+        </div>
+        <div class="card">
+            <h3>Sports Complex</h3>
+            <p>Our state-of-the-art sports complex includes facilities for various sports and recreational activities.</p>
+        </div>
+    </section>
+
+    <section id="faculty" class="content">
+        <h2>Our Faculty</h2>
+        <div class="card">
+            <h3>Dr. John Smith</h3>
+            <p>Head of Physics Department. PhD in Theoretical Physics with 15 years of teaching experience.</p>
+        </div>
+        <div class="card">
+            <h3>Dr. Sarah Brown</h3>
+            <p>Head of Chemistry Department. PhD in Organic Chemistry, author of several research papers.</p>
+        </div>
+        <div class="card">
+            <h3>Dr. Michael Lee</h3>
+            <p>Head of Computer Science Department. PhD in Artificial Intelligence, with a focus on machine learning.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="content">
+        <h2>Contact Us</h2>
+        <p>Email: info@mycollege.edu</p>
+        <p>Phone: +123-456-7890</p>
+        <p>Address: 123 College Road, City, Country</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 My College. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        function showContent(sectionId) {
+            // Hide all content sections
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            // Show the selected content section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
